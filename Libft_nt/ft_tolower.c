@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:30:05 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/16 16:32:16 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 20:15:49 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_tolower(int c)
 	c += ('a' - 'A');
 	return (c);
 }
-
 
 // int		main(void)
 // {

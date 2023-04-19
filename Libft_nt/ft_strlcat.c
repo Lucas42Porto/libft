@@ -6,10 +6,9 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:30:38 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/16 16:32:32 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 20:12:06 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -26,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (size + size_src);
 	i = size_dst;
 	j = 0;
-	while (src[j] && j < size - size_dst - 1 )
+	while (src[j] && j < size - size_dst - 1)
 	{
 		dst[i] = src[j];
 		i++;
@@ -36,7 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (size_dst + size_src);
 }
 
-int main()
+/*int main()
 {
     char s1[20] = {"Hello"};
     char s2[20] = {"World"};
@@ -48,4 +47,4 @@ int main()
  	printf("%d\n", ptr);
 
      return (0);
-}
+}*/

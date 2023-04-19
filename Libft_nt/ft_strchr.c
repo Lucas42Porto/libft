@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 17:37:47 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/16 16:32:27 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 20:20:09 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@
 **	tions locate the terminating `\0'.
 */
 
-
 #include "libft.h"
 
-char		*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
 

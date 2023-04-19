@@ -6,13 +6,13 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 17:04:45 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/15 17:05:39 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 20:00:27 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);

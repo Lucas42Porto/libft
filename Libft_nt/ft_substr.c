@@ -6,11 +6,9 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:30:08 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/16 16:50:44 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 20:23:33 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 ** LIBRARY: N/A
@@ -20,13 +18,16 @@
 ** 	Allocates (with malloc(3)) and returns a substring from the string ’s’.
 **	The substring begins at index ’start’ and is of maximum size ’len’.
 */
-char *ft_substr(char const *s, unsigned int start, size_t len)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
+	char	*sub;
 	size_t	i;
 	size_t	j;
 
-	if (!s || !(sub = (char *)malloc(len + 1)))
+	sub = (char *)malloc(len + 1);
+	if (!s || !sub)
 		return (0);
 	i = start;
 	j = 0;
@@ -35,6 +36,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	sub[j] = '\0';
 	return (sub);
 }
+
 /*
 int	main ()
 {

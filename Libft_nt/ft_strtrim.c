@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 17:13:56 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/15 20:27:17 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 21:02:26 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
  * If there are no spaces at the beginning and end of the parameter string s
  * the function returns a copy of s. If the allocation of memory fails the
  * function returns NULL.*/
-
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

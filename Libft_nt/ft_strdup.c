@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:30:45 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/16 16:32:36 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/19 20:14:26 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 #include "libft.h"
 
-char		*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*str;
 	size_t	i;
