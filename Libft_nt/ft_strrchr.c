@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:30:16 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/19 20:18:28 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/23 18:48:31 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int			i;
-	const char	*ini;
+	int		l;
+	char	*str;
 
-	ini = s;
-	i = ft_strlen(s);
-	s = (s + i);
-	while (*s != *ini && c != *s)
-		s--;
-	if (c == *s)
-		return ((char *)s);
+	str = (char *)s;
+	l = ft_strlen(s);
+	while (l >= 0)
+	{
+		if (str[l] == ((char)c))
+			return (&str[l]);
+		l--;
+	}
 	return (0);
 }
