@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/16 16:30:50 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/20 21:19:39 by lumarque         ###   ########.fr       */
+/*   Created: 2023/04/20 18:48:35 by lumarque          #+#    #+#             */
+/*   Updated: 2023/04/23 13:58:47 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
+void	ft_putnbr_fd(int n, int fd)
+{	
+	unsigned int	y;
 
-	i = 0;
-	while (s[i])
+	if (n < 0)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		ft_putchar_fd('-', fd);
+		y = (unsigned int)(n * -1);
 	}
+	else
+		y = (unsigned int)n;
+	if (y >= 10)
+		ft_putnbr_fd((y / 10), fd);
+	ft_putchar_fd((char)(y % 10 + 48), fd);
 }
 
-/*int	main()
+/*int main()
 {
-	ft_putstr_fd("Test", 1);
-	return (0);
+	ft_putnbr_fd(4, 1);
+	return 0;
 }*/
