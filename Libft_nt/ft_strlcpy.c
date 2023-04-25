@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:30:35 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/19 20:49:08 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/25 17:40:25 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	size_src;
 
-	if (!dst || !src)
-		return (0);
 	size_src = ft_strlen(src);
 	i = 0;
 	if (size > 0)
@@ -28,7 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			dst[i] = src[i];
 			i++;
 		}
-		dst[i] = 0;
+		dst[i] = '\0';
 	}
 	return (size_src);
 }

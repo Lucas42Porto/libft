@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 19:10:46 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/23 18:07:21 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/25 19:38:05 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	words = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (words == NULL || s == NULL)
+	words = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!words || !s)
 		return (NULL);
 	while (s[i])
 	{
