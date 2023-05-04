@@ -6,32 +6,25 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 19:10:46 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/25 19:38:05 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/04/28 20:12:15 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_separator(char c, char sep)
-{
-	if (c == sep)
-		return (1);
-	return (0);
-}
-
-static int	count_words(const char *str, char sep)
+static int	count_words(const char *s, char sep)
 {
 	int	i;
 	int	words;
 
 	i = 0;
 	words = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (!is_separator(str[i], sep))
+		if (s[i] != sep)
 		{
 			words++;
-			while (str[i] && !is_separator(str[i], sep))
+			while (s[i] && s[i] != sep)
 				i++;
 		}
 		else
@@ -43,17 +36,17 @@ static int	count_words(const char *str, char sep)
 static char	*word_cpy(const char *str, char sep)
 {
 	char	*word;
-	int		wordlen;
+	int		wdlen;
 	int		i;
 
-	wordlen = 0;
-	while (str[wordlen] && !is_separator(str[wordlen], sep))
-		wordlen++;
-	word = (char *) malloc(sizeof(char *) * (wordlen + 1));
-	if (word == NULL)
+	wdlen = 0;
+	while (str[wdlen] && (str[wdlen] != sep))
+		wdlen++;
+	word = (char *) malloc(sizeof(char *) * (wdlen + 1));
+	if (!word)
 		return (NULL);
 	i = 0;
-	while (str[i] && !is_separator(str[i], sep))
+	while (str[i] && (str[i] != sep))
 	{
 		word[i] = str[i];
 		i++;
@@ -68,17 +61,19 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	char	**words;
 
+	if (!s)
+		return (0);
 	i = 0;
 	j = 0;
 	words = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!words || !s)
+	if (!words)
 		return (NULL);
 	while (s[i])
 	{
-		if (!is_separator(s[i], c))
+		if (s[i] != c)
 		{
 			words[j] = word_cpy(&s[i], c);
-			while (s[i] && !is_separator(s[i], c))
+			while (s[i] && (s[i] != c))
 				i++;
 			j++;
 		}

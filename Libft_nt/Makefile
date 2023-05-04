@@ -6,7 +6,7 @@
 #    By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/16 14:47:25 by lumarque          #+#    #+#              #
-#    Updated: 2023/04/23 17:45:15 by lumarque         ###   ########.fr        #
+#    Updated: 2023/04/28 21:32:30 by lumarque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,4 +57,3 @@ teste: fclean
 	${CC} ${CFLAGS} ${INCLUDE} main.c ${NAME} -o teste
 
 .PHONY: all clean fclean re
-
