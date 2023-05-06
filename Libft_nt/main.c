@@ -6,7 +6,7 @@
 /*   By: lumarque <lumarque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 21:04:55 by lumarque          #+#    #+#             */
-/*   Updated: 2023/04/28 21:28:44 by lumarque         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:21:40 by lumarque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	test(char *n)
 	return (i1 == i2);
 }
 
-void test_atoi(void)
+int test_atoi(void)
 {
 	if (!test("0")
 		|| !test("-0")
@@ -69,7 +69,7 @@ int	testcmp(int i, char *a)
 {
 	return (!!strcmp(ft_itoa(i), a));
 }
-void test_itoa(void)
+int test_itoa(void)
 {
 	if (testcmp(1, "1")
 		|| testcmp(-1, "-1")
@@ -90,4 +90,3 @@ void test_itoa(void)
 	printf("OK: ft_itoa\n");
 	return (0);
 }
-
